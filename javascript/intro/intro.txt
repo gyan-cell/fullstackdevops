@@ -1,0 +1,60 @@
+JavaScript is a scripting or programming language ,
+    that allows you to implement complex features on web pages 
+    — every time a web page does more than just sit there and display static information 
+    for you to look at — displaying timely content updates, interactive maps,
+    animated 2D/3D graphics, scrolling video 
+    jukeboxes, etc. — you can bet that JavaScript is probably involved.
+    It is the third layer of the layer cake of standard web technologies, two of which (HTML and CSS)
+  we have covered in much more detail in other parts of the Learning Area.
+
+
+  The DOM (Document Object Model) API allows you to manipulate HTML
+  and CSS, creating, removing and changing HTML, 
+   dynamically applying new styles to your page, etc.
+   Every time you see a popup window appear on a page, or some new content
+   displayed (as we saw above in our simple demo) for example, that's the DOM in action.
+
+The Geolocation API retrieves geographical information. 
+This is how Google Maps is able to find your location and plot it on a map.
+
+The Canvas and WebGL APIs allow you to create animated 2D and 3D graphics.
+People are doing some amazing things using these web technologies — see Chrome Experiments and webglsamples.
+
+
+Audio and Video APIs like HTMLMediaElement and WebRTC allow you to do really interesting things with multimedia,
+such as play audio and video right in a web page
+or grab video from your web camera and display it on 
+someone else's computer (try our simple Snapshot demo to get the idea).
+
+
+
+JavaScript running order
+
+When the browser encounters a block of JavaScript, it generally runs it in order, from top to bottom.
+This means that you need to be careful what order you put things in.
+For example, let's return to the block of JavaScript we saw in our first example:
+
+const button = document.querySelector("button");
+
+button.addEventListener("click", updateName);
+
+function updateName() {
+  const name = prompt("Enter a new name");
+  button.textContent = `Player 1: ${name}`;
+}
+
+
+
+JavaScript is a lightweight interpreted programming language. 
+The web browser receives the JavaScript code in its original text form and runs the script from that.
+From a technical standpoint, most modern JavaScript interpreters actually use a technique called
+just-in-time compiling to improve performance; 
+the JavaScript source code gets compiled into a faster, binary format while the script is being used,
+    so that it can be run as quickly as possible.
+    However, JavaScript is still considered an interpreted language,
+    since the compilation is handled at run time, rather than ahead of time.
+
+
+Client side code runs on users computer || Server side code runs on server , 
+then its results are downloaded and displayed in browseer.
+
