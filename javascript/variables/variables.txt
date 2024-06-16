@@ -1,0 +1,30 @@
+What is variables?
+
+Variables are containers for storing data values.
+These values can have multiple Data Types.
+Types of data Types suppotted in javascript.
+
+String
+Number
+Bigint
+Boolean
+Undefined
+Null
+Symbol
+Object
+
+
+The Object Datatype
+The object data type can contain both built-in objects, and user defined objects:
+
+Built-in object types can be:
+
+objects, arrays, dates, maps, sets, intarrays, floatarrays, promises, and more.
+
+
+JavaScript Types are Dynamic
+JavaScript has dynamic types. This means that the same variable can be used to hold different data types:
+
+let x;       // Now x is undefined
+x = 5;       // Now x is a Number
+x = "John";  // Now x is a String
