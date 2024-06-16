@@ -1,5 +1,5 @@
 # fullstackdevops
-#Foundation
+# Foundation
 Basics of javascript
 ##
 Foundation Javascript, async nature of JS
@@ -39,7 +39,7 @@ Scaling Node.js, performance benchmarks
 Deploying npm packages
  
 
-#Frontend
+# Frontend
 
 Reconcilers and Frontend frameworks
 ##
@@ -62,7 +62,7 @@ Custom hooks
 In house auth using next auth
  
 
-#Basic Devops
+# Basic Devops
 
 Docker end to end
 ##
@@ -79,7 +79,7 @@ Nginx and reverse proxies
 
  
 
-#Complete 1-100 Syllabus
+# Complete 1-100 Syllabus
 ##
 Advanced Backend, System Design
 ##
@@ -122,7 +122,7 @@ Real time communication, basics of WebRTC
 ##
  
 
-#Advanced Devops
+# Advanced Devops
 
 Container Orchestration, Docker Swarm
 Kubernetes
