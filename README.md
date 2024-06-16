@@ -4,7 +4,7 @@ Basics of javascript
 ##
 Foundation Javascript, async nature of JS
 ##
-Node.js and its runtime=
+Node.js and its runtime
 ##
 Databases (NoSQL/SQL)
 ##
