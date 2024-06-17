@@ -28,3 +28,73 @@ JavaScript has dynamic types. This means that the same variable can be used to h
 let x;       // Now x is undefined
 x = 5;       // Now x is a Number
 x = "John";  // Now x is a String
+
+Rules for Defining variables in javascript
+
+1). Names can contain letters, numbers, underscores, and dollar signs ( $ ).
+2). Names must begin with a letter or an underscore ( _ ).
+3). Names are case sensitive.
+4). Names can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ ).
+5). Reserved words cannot be used as names.
+
+
+
+Lets Get To More Theory of variables in code .
+
+The Var Keyword : -----------------------------------------------------------------------------------
+
+The var is the oldest keyword to declare a variable in JavaScript.
+It has the Global scoped or function scoped which means variables defined
+outside the function can be accessed globally
+and variables defined inside a particular function can be accessed within the function. 
+it is unsafe and its usage is not recommended anymore.
+
+Syntax of var keyword.
+
+var name = "John";
+console.log(name);
+
+
+The Let Keyword : -----------------------------------------------------------------------------------
+
+
+The let keyword is used to declare variables that are limited in scope to the block statement
+that they are used in.
+The let keyword is an improved version of the var keyword. It is introduced in the ES6 or EcmaScript 2015.
+These variables has the block scope. It can’t be accessible outside the particular code block ({block}).
+
+
+// Syntax of let keyword
+
+let a = 10;
+function f() {
+    let b = 9
+    console.log(b);
+    console.log(a);
+}
+f();
+
+
+The Const Keyword : ----------------------------------------------------------------------------------
+
+The const keyword has all the properties that are the same as the let keyword.
+except the user cannot update it and have to assign it with a value at the time of declaration.
+These variables also have the block scope. It is mainly used to create constant
+variables whose values can not be changed once they are initialized with a value.
+
+
+// Syntax of const keyword
+
+const a = {
+    prop1: 10,
+    prop2: 9
+}
+
+// It is allowed
+a.prop1 = 3
+
+// It is not allowed
+a = {
+    b: 10,
+    prop2: 9
+}
