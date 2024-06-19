@@ -27,6 +27,10 @@ or grab video from your web camera and display it on
 someone else's computer (try our simple Snapshot demo to get the idea).
 
 
+Get to know standard built-in objects : 
+Array, Boolean, Date, Error, Function, JSON, Math, Number, Object, RegExp,
+String, Map, Set, WeakMap, WeakSet, and others.
+
 
 JavaScript running order
 

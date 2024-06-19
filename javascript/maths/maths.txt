@@ -1,0 +1,63 @@
+ we discuss math in JavaScript — how we can use operators
+ and other features to successfully manipulate numbers to do our bidding.
+
+
+ Types of Numbers : 
+ We use different terms to describe different type of decimal no. in JavaScript.
+
+ Integers : We all know integers are no . without the fractional parts , They can be either 
+ positive or negative.
+
+ Floating Point Numbers :
+ Floating point numbers are numbers with decimal points.
+
+ We have different types of numbers Systems.
+ Binary : The Lowest level language that we use is binary consisting of 0 and 1 of base 2.
+ ocatal : The number system that we use is octal system consisting of 0 to 7 of base 8.
+ Hexadecimal : The number system that we use is hexadecimal system consisting
+ of 0 to 9 and A to F in order of base 16.
+
+unlike some other programming languages,
+JavaScript only has one data type for numbers, both integers and decimals — you guessed it, Number.
+This means that whatever type of numbers you are dealing with in JavaScript,
+you handle them in exactly the same way.
+
+JavaScript has a second number type called bigint used for a very  very large integers.
+
+how to declare number : 
+const myInt = 5;
+const myFloat = 6.667;
+myInt;
+myFloat;
+
+
+Numbers are the types of Objects So all the Methods of Object  Will Still Work on Numbers.
+
+
+Method                  	Description
+toString()	              Returns a number as a string
+toExponential()	          Returns a number written in exponential notation
+toFixed()	                Returns a number written with a number of decimals
+toPrecision()	            Returns a number written with a specified length
+valueOf()	                Returns a number as a number
+
+
+Number() can also convert a date to a number.
+Number(new Date("1970-01-01"))
+The Date() method returns the number of milliseconds since 1.1.1970.
+
+
+Number.isInteger()      	Returns true if the argument is an integer
+Number.isSafeInteger()	  Returns true if the argument is a safe integer
+Number.parseFloat()     	Converts a string to a number
+Number.parseInt()	        Converts a string to a whole number
+
+
+Number Methods Cannot be Used on Variables
+The number methods above belong to the JavaScript Number Object.
+
+These methods can only be accessed like Number.isInteger().
+
+Using X.isInteger() where X is a variable, will result in an error:
+
+TypeError X.isInteger is not a function.
