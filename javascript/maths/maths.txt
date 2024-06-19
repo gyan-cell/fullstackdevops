@@ -61,3 +61,50 @@ These methods can only be accessed like Number.isInteger().
 Using X.isInteger() where X is a variable, will result in an error:
 
 TypeError X.isInteger is not a function.
+
+
+Arithmetic operators
+Arithmetic operators are used for performing mathematical calculations in JavaScript:
+
+
+Addition (+)	Adds together two values
+Subtraction (-)	Subtracts one value from another
+Multiplication (*)	Multiplies two values
+Division (/)	Divides one value by another
+Modulus (%)	Returns the division remainder
+Exponentiation (**)	Returns the first number raised to the power of the second number
+
+Increment And Decrement Operators
+
+
+Pre-increment (++x)	Increments a number by 1
+Pre-decrement (--x)	Decrements a number by 1
+Post-increment (x++)	Increments a number by 1
+Post-decrement (x--)	Decrements a number by 1
+
+Assignment operators 
+Assignment operators are used to assign values to variables.
+Assignment operators are operators that assign a value to a variable.
+We have already used the most basic one, =,loads of times — it assigns the variable
+on the left the value stated on the right.
+
+
++= :	Addition assignment	Adds the value on the right to the variable value on the left,
+      then returns the new variable value	x += 4;	x = x + 4;
+-= :	Subtraction assignment	Subtracts the value on the right from the variable value on the left,
+      then returns the new variable value	x -= 4;	x = x - 4;
+*= :	Multiplication assignment	Multiplies the value on the right to the variable value on the left,
+      then returns the new variable value	x *= 4;	x = x * 4;
+/= :	Division assignment	Divides the value on the right from the variable value on the left,
+      then returns the new variable value	x /= 4;	x = x / 4;
+%= :	Modulus assignment	Modulus the value on the right from the variable value on the left,
+      then returns the new variable value	x %= 4;	x = x % 4;
+
+Comparison operators 
+
+===	Strict equality	Tests whether the left and right values are identical to one another	5 === 2 + 4
+!==	Strict inequality	Tests whether the left and right values are not identical to one another	5 !== 2 + 4
+<	Less than	Tests whether the left value is less than the right value	5 < 2 + 4
+>	Greater than	Tests whether the left value is greater than the right value	5 > 2 + 4
+<=Less than or equal to	Tests whether the left value is less than or equal to the right value	5 <= 2 + 4
+>=Greater than or equal to	Tests whether the left value is greater than or equal to the right value	5 >= 2 + 4
