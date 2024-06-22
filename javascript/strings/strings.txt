@@ -1,0 +1,76 @@
+The String object is used to represent and manipulate a sequence of characters.
+Strings are useful for holding data that can be represented in text form. 
+Some of the most-used operations on strings are to check their length,
+to build and concatenate them using the + and += string operators checking for the
+existence or location of substrings with the indexOf() method, or extracting substrings with the substring() method.
+
+Strings can be created as primitives, from string literals, or as objects, using the String() constructor:
+
+const string1 = "A string primitive";
+const string2 = 'Also a string primitive';
+const string3 = `Yet another string primitive`;
+
+// declare String object from String constructor
+
+const string4 = new String("A string object");
+
+Character access
+
+The charAt() method returns the character at the specified index in a string.
+
+const string5 = "Hello, World!";
+string5.charAt(0); // "H"
+string5.charAt(1); // "e"
+string5.charAt(2); // "l"
+The other way is to treat the string as an array-like object, where individual characters correspond to a numerical index:
+string5[0]; // "H"
+string5[1]; // "e"
+string5[2]; // "l"
+
+String literals (denoted by double or single quotes) and strings returned 
+from String calls in a non-constructor context (that is, called without using the new keyword) are
+primitive strings.
+
+const strPrim = "foo"; // A literal is a string primitive
+const strPrim2 = String(1); // Coerced into the string primitive "1"
+const strPrim3 = String(true); // Coerced into the string primitive "true"
+const strObj = new String(strPrim); // String with new returns a string wrapper object.
+
+console.log(typeof strPrim); // "string"
+console.log(typeof strPrim2); // "string"
+console.log(typeof strPrim3); // "string"
+console.log(typeof strObj); // "object"
+
+
+Different String methods
+
+Javascript strings are primitive and immutable: All string methods produces a new string without altering the original string.
+
+String length       : This method returns the number of characters in a string.
+String charAt()     : This method returns the character at the specified index in a string.
+String charCodeAt() : This method returns the Unicode value of the character at the specified index in a string.
+String at()         : This method returns the character at the specified index in a string.
+String [ ]          : This method returns the character at the specified index in a string.
+String slice()      : This method extracts a part of a string and returns a new string.
+String substring()  : This method extracts a part of a string and returns a new string.
+String substr()     : This method extracts a part of a string and returns a new string. 
+String toUpperCase() : This method converts a string to uppercase.
+String toLowerCase() : This method converts a string to lowercase.
+String concat()     : This method joins two or more strings.
+String trim()       : This method removes whitespace from both ends of a string.
+String trimStart()  : This method removes whitespace from the beginning of a string.
+String trimEnd()    : This method removes whitespace from the end of a string.
+String padStart()   : This method pads a string with another string (multiple times, if needed) until it reaches a specified length.
+String padEnd()     : This method pads a string with another string (multiple times, if needed) until it reaches a specified length.
+String repeat()     : This method repeats a string, multiple times, if needed.
+String replace()    : This method replaces text with another text.
+String replaceAll() : This method replaces text with another text.
+String split()      : This method splits a string into an array of substrings.
+String indexOf()    : This method searches a string for a specified value and returns its position.
+String lastIndexOf() : This method searches a string for a specified value and returns its position.
+String search()     : This method searches a string for a specified value and returns its position.
+String match()      : This method searches a string for a specified value and returns its position.
+String matchAll()   : This method searches a string for a specified value and returns its position.
+String includes()   : This method checks if a string contains a specified value.
+String startsWith() : This method checks if a string starts with a specified value.
+String endsWith()   : This method checks if a string ends with a specified value.
