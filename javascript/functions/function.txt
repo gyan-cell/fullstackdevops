@@ -1,0 +1,88 @@
+JavaScript Function Syntax
+A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().
+A Function can also include parameters (values that are used within the function) and a block of code to be executed.
+A functiom is a block of code which only runs when it is called And is often used to perform a particular task .
+which can be reused over and over again.
+
+Syntax : 
+function myFunction() {
+  // code to be executed
+}
+Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).
+
+Function Return
+When JavaScript reaches a return statement, the function will stop executing.
+
+// Function is called, the return value will end up in x
+let x = myFunction(4, 3);
+
+function myFunction(a, b) {
+// Function returns the product of a and b
+  return a * b;
+}
+
+Functions Used as Variable Values
+Functions can be used the same way as you use variables, in all types of formulas, assignments, and calculations.
+
+let x = toCelsius(77);
+let text = "The temperature is " + x + " Celsius";
+
+Local Variables
+Variables declared within a JavaScript function, become LOCAL to the function.
+
+Local variables can only be accessed from within the function.
+
+Global Variables
+Variables that are declared outside of all functions, become GLOBAL.
+
+Global variables can be accessed from within any function.
+
+Types of Functions in JavaScript : 
+Named Function : A Naming Function is a function that has a name. Named function is used to perform a particular task 
+again and again.
+function add(a, b) {
+    return a + b;
+}
+console.log(add(5, 4));
+
+Anonymous Function : An Anonymous Function is a function that does not have a name.
+let add = function (a, b) {
+    return a + b;
+}
+console.log(add(5, 4));
+
+Nested Function : A Nested Function is a function that is defined inside another function.
+The inner function has access to the variables and arguments of the outer function.
+However, variables declared within inner functions cannot be accessed by outer functions.
+
+function msg(firstName) {
+    function hey() {
+        console.log("Hey " + firstName);
+    }
+
+    return hey();
+}
+
+msg("Ravi");
+
+Immediately Invoked Function Expressions : An IIFE is a JavaScript function that runs as soon as it is defined.
+The browser executes the invoked function expression as soon as it detects it.
+Immediately invoked function expression has the advantage of running instantly where it is situated 
+in the code and producing direct output.
+That is, it is unaffected by code that occurs later in the script and can be beneficial.
+
+let msg = (function() {
+    return "DoomsDay" ;
+})();
+console.log(msg);
+
+Arrow function expressions : An arrow function expression is a shorter way of writing a function expression.
+Arrow functions don't have their own bindings to this, arguments, or super, and should not be used as methods.
+Arrow functions cannot be used as constructors. Calling them with new throws a TypeError.
+They also don't have access to the new.target keyword.
+Arrow functions cannot use yield within their body and cannot be created as generator functions.
+
+const materials = ['Hydrogen', 'Helium', 'Lithium', 'Beryllium'];
+
+console.log(materials.map((material) => material.length));
+// Expected output: Array [8, 6, 7, 9]
