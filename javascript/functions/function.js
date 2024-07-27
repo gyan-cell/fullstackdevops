@@ -52,4 +52,6 @@ const iife = (() => {
 const iife1 = (function() {
   console.log("I am an IIFE In Format of Standard Function.");
 })()
-
+// This Will Return Undefined
+console.log(iife1);
+console.log(iife)
