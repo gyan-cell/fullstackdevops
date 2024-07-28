@@ -1,3 +1,5 @@
+Hey Guys Welcome To This Repos This is An My Attempt To Cover The Important Topics Of Web Dev Through This Notes Please Support me And Feel Free To Contribute.
+
 # fullstackdevops
 # Foundation
 Basics of javascript
