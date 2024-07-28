@@ -26,3 +26,12 @@ const objectPrototype = Object.getPrototypeOf(person)
 console.log(objectPrototype)
 console.log(objectPrototype.constructor)
 console.log(Object.getPrototypeOf(new Date()))
+
+const strawHat = {
+  whoAmI: function(name) {
+    console.log(`Hi! I'm ${name}.`)
+  }
+}
+
+strawHat.whoAmI("John")
+
