@@ -1,0 +1,50 @@
+There Are Two Main Methods To EXECUTE javascript Code 
+1. In Browser By  Creaing A Html File And Running It In Browser And Obviously The Javascript
+    File Should Be Attached To html file through Script Tag or Should Be Written in html File .
+2. BY Using Javascript Runtime Like NodeJs or Deno .
+
+We Will Be Discussing About Nodejs Primarly
+
+----------------------------------JavaScript Engine-----------------------------------
+A JavaScript engine is a program that executes JavaScript code . 
+
+Example : 
+
+V8 is the name of the JavaScript engine that powers Google Chrome.
+It's the thing that takes our JavaScript and executes it while browsing with Chrome.
+V8 is the JavaScript engine i.e. it parses and executes JavaScript code.
+The DOM, and the other Web Platform APIs (they all makeup runtime environment) are provided by the browser.
+The cool thing is that the JavaScript engine is independent of the browser in which it's hosted.
+This key feature enabled the rise of Node.js. V8 was chosen to be the engine that powered Node.js back in 2009,
+and as the popularity of Node.js exploded, 
+V8 became the engine that now powers an incredible amount of server-side code written in JavaScript.
+
+Other browsers have their own JavaScript engine:
+
+Firefox has SpiderMonkey
+Safari has JavaScriptCore (also called Nitro)
+Edge was originally based on Chakra but has more recently been rebuilt using Chromium and the V8 engine.
+
+-----------------------------------Node.js-----------------------------------
+
+Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. 
+It allows you to run JavaScript code outside of the browser. 
+Node.js is an open source server-side platform that allows you to build scalable network applications.
+A Node.js app runs in a single process, without creating a new thread for every request.
+Node.js provides a set of asynchronous I/O primitives in its standard library that prevent JavaScript
+code from blocking and generally, libraries in Node.js are written using non-blocking paradigms, 
+making blocking behavior the exception rather than the norm.
+
+Example Of Basic Node.js Server: 
+
+import { createServer } from 'node:http';
+const hostname = '127.0.0.1';
+const port = 3000;
+const server = createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello World');
+});
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
