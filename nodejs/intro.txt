@@ -48,3 +48,6 @@ const server = createServer((req, res) => {
 server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
+
+In This Directory We Will Be Discussing About Nodejs Primarly ANd Its Basics And Some Advanced Concepts As Well.
+
