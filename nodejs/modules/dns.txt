@@ -1,0 +1,19 @@
+Source Code :  https://nodejs.org/docs/latest/api/dns.html
+
+/lib/dns.js
+
+DNS : The node:dns module enables name resolution. For example, use it to look up IP addresses of host names.
+Although named for the Domain Name System (DNS), it does not always use the DNS protocol for lookups.
+dns.lookup() uses the operating system facilities to perform name resolution. It may not need to perform any network communication.
+To perform name resolution the way other applications on the same system do, use dns.lookup().
+
+The node:dns module is a built-in tool in Node.js that helps your computer
+translate human-readable domain names (like google.com) into machine-readable IP addresses (like 172.217.12.14).
+
+
+const dns = require('node:dns');
+
+dns.lookup('example.org', (err, address, family) => {
+  console.log('address: %j family: IPv%s', address, family);
+});
+// address: "93.184.216.34" family: IPv4
