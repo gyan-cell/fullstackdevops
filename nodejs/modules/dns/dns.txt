@@ -2,6 +2,22 @@ Source Code :  https://nodejs.org/docs/latest/api/dns.html
 
 /lib/dns.js
 
+What is a Module in Node.js?
+Consider modules to be the same as JavaScript libraries.
+A set of functions you want to include in your application.
+Node.js has a set of built-in modules which you can use without any further installation.
+
+Node.js HTTP Module
+
+Node.js has a built-in HTTP module that you can use to send and receive HTTP requests and responses.
+
+The HTTP module can create an HTTP server that listens to server ports and gives a response back to the client.
+
+Use the createServer() method to create an HTTP server:
+
+var http = require('http');
+
+
 DNS : The node:dns module enables name resolution. For example, use it to look up IP addresses of host names.
 Although named for the Domain Name System (DNS), it does not always use the DNS protocol for lookups.
 dns.lookup() uses the operating system facilities to perform name resolution. It may not need to perform any network communication.
