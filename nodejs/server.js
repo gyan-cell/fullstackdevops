@@ -1,4 +1,5 @@
 import { createServer } from "node:http";
+import { simpleDnaLookup } from "./modules/dns/dns.js";
 const hostname = '127.0.0.1';
 const port = 3000;
 const server = createServer((req, res) => {
@@ -12,12 +13,11 @@ server.on('error', (err) => {
 })
 
 // Dns Lookup Example
-import dns from 'node:dns';
-dns.lookup("google.com", (err, address, family) => {
-  console.log('address: %j family: IPv%s', address, family);
-  console.log(address)
-  console.log(family)
-})
 server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
+  console.log("Dns Lookup Example")
+  simpleDnaLookup;
+  console.log("Simple Dna Name Resolution");
 })
+
+
