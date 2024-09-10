@@ -1,5 +1,5 @@
 import { createServer } from "node:http";
-import { simpleDnaLookup } from "./modules/dns/dns.js";
+import { simpleDnaLookup, simpleDnaNameResolution } from "./modules/dns/dns.js";
 const hostname = '127.0.0.1';
 const port = 3000;
 const server = createServer((req, res) => {
@@ -18,6 +18,7 @@ server.listen(port, hostname, () => {
   console.log("Dns Lookup Example")
   simpleDnaLookup;
   console.log("Simple Dna Name Resolution");
+  simpleDnaNameResolution;
 })
 
 

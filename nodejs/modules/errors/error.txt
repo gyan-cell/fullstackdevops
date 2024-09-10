@@ -1,0 +1,95 @@
+Errors in nodejs : 
+Applications running in Node.js will generally experience four categories of errors:
+
+
+Standard JavaScript errors such as <EvalError>, <SyntaxError>, <RangeError>, <ReferenceError>, <TypeError>, and <URIError>.
+System errors triggered by underlying operating system constraints such as 
+attempting to open a file that does not exist or attempting to send data over a closed socket.
+User-specified errors triggered by application code.
+AssertionErrors are a special class of error that can be triggered when Node.js detects an exceptional logic violation that should never occur. 
+These are raised typically by the node:assert module.
+
+
+Node.js supports several mechanisms for propagating and handling errors that occur while an application is running.
+How these errors are reported and handled depends entirely on the type of Error and the style of the API that is called.
+
+Node.js supports several mechanisms for propagating and handling errors that occur while an application is running.
+How these errors are reported and handled depends entirely on the type of Error and the style of the API that is called.
+
+// Throws with a ReferenceError because z is not defined.
+try {
+  const m = 1;
+  const n = m + z;
+} catch (err) {
+  // Handle the error here.
+}
+
+Any use of the JavaScript throw mechanism will raise an exception that must be handled or the Node.js process will exit immediately.
+With few exceptions, Synchronous APIs (any blocking method that does not
+return a <Promise> nor accept a callback function, such as fs.readFileSync), will use throw to report errors.
+
+Error in async functions can be handled in various methods...
+
+Some asynchronous methods returns a <Promise>, you should always take into account that it might be rejected.
+See --unhandled-rejections flag for how the process will react to an unhandled promise rejection.
+
+const fs = require('fs/promises');
+
+(async () => {
+  let data;
+  try {
+    data = await fs.readFile('a file that does not exist');
+  } catch (err) {
+    console.error('There was an error reading the file!', err);
+    return;
+  }
+  // Otherwise handle the data
+})();
+
+
+Most asynchronous methods that accept a callback function will accept an Error object passed as the first argument to that function. 
+If that first argument is not null and is an instance of Error, then an error occurred that should be handled.
+
+
+const fs = require('node:fs');
+fs.readFile('a file that does not exist', (err, data) => {
+  if (err) {
+    console.error('There was an error reading the file!', err);
+    return;
+  }
+  // Otherwise handle the data
+});
+
+
+When an asynchronous method is called on an object that is an EventEmitter, errors can be routed to that object's 'error' event.
+
+const net = require('node:net');
+const connection = net.connect('localhost');
+
+// Adding an 'error' event handler to a stream:
+connection.on('error', (err) => {
+  // If the connection is reset by the server, or if it can't
+  // connect at all, or on any sort of error encountered by
+  // the connection, the error will be sent here.
+  console.error(err);
+});
+
+connection.pipe(process.stdout);
+
+
+A handful of typically asynchronous methods in the Node.js API may still use the throw mechanism to raise exceptions that must be handled using try…catch
+. There is no comprehensive list of such methods; please refer to the documentation of each method to determine 
+the appropriate error handling mechanism required.
+
+
+
+A handful of typically asynchronous methods in the Node.js API may still use the throw mechanism to raise exceptions that must be
+handled using try…catch. There is no comprehensive list of such methods; please refer to the documentation of each method to determine
+the appropriate error handling mechanism required.
+
+
+
+
+For More Info On Error Handling in node js Refer To : https://nodejs.org/api/errors.html
+
+
