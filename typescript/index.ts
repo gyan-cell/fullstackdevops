@@ -120,3 +120,65 @@ else {
   console.log("newEmp.display() is undefined");
 }
 
+// You Can use Interfaces With Functions too
+
+console.log("Interface With Functions : ");
+
+interface returnString {
+  name: string;
+  class: "10th" | "11th" | "12th";
+}
+
+
+function returnUserName(data: returnString): returnString {
+  console.log(data)
+  return data
+}
+
+returnUserName({ name: "Garry Kasparov", class: "12th" })
+
+
+// There is Already Small Set Of derived primitives defined in the typescript  language.
+// We can use these primitives in our code.
+//BOOLEAN
+//BIGINT
+//NUMBER
+//STRING
+//SYMBOL
+//ANY
+//UNKNOWN
+//NULL
+//UNDEFINED
+//VOID
+//OBJECT
+
+
+
+//Unions
+
+//With a union, you can declare that a type could be one of many types. For example,
+//you can describe a boolean type as being either true or false:
+
+console.log("Use of Unions : And Types : ");
+
+type myBool = true | false;
+type MyWindowState = "open" | "closed" | "minimized";
+
+
+// Generics : Generics provide variables to types ; 
+
+type myString = Array<string>;
+type myNumber = Array<number>;
+type objectWithArray = Array<{ name: string }>;
+
+
+//We Can always define the type of the variable using Generics
+
+
+interface BackMan<Type> {
+  add: (data: Type) => Type;
+  get: (data: Type) => Type;
+}
+
+declare const badMan: BackMan<string>;
+console.log(badMan.add("Gyan"))
