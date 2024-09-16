@@ -111,3 +111,26 @@ returnUserName({ name: "Garry Kasparov", class: "12th" });
 //you can describe a boolean type as being either true or false:
 console.log("Use of Unions : And Types : ");
 console.log(badMan.add("Gyan"));
+const message = "Hello World";
+const textToLowerCase = (text) => {
+    return text.toLowerCase();
+};
+// TYPE Assertion 
+// Sometimes you will have information about the type of a variable that TypeScript cannot determine.
+const myCanvas = document.getElementById("main_canvas");
+const myCanvas2 = document.getElementById("main_canvas");
+// TypeScript only allows type assertions which convert to a more specific or less specific version of a type.
+// This rule prevents “impossible” coercions like:
+//const x = "hello" as number;
+// Change 1:
+const req = { url: "https://example.com", method: "GET" };
+function move(animal) {
+    if ("swim" in animal) {
+        return animal.swim();
+    }
+    else if ("eat" in animal) {
+        if (animal.eat) {
+            return animal.eat("shark food");
+        }
+    }
+}

@@ -182,3 +182,55 @@ interface BackMan<Type> {
 
 declare const badMan: BackMan<string>;
 console.log(badMan.add("Gyan"))
+
+
+
+const message = "Hello World";
+
+const textToLowerCase = (text: string): string => {
+  return text.toLowerCase();
+}
+
+
+// TYPE Assertion 
+// Sometimes you will have information about the type of a variable that TypeScript cannot determine.
+
+const myCanvas = document.getElementById("main_canvas") as HTMLCanvasElement;
+
+
+const myCanvas2 = <HTMLCanvasElement>document.getElementById("main_canvas");
+// TypeScript only allows type assertions which convert to a more specific or less specific version of a type.
+// This rule prevents “impossible” coercions like:
+
+
+//const x = "hello" as number;
+
+// Change 1:
+const req = { url: "https://example.com", method: "GET" as "GET" };
+// Change 2
+//handleRequest(req.url, req.method as "GET");
+
+// NULL AND UNDEFINED
+//JavaScript has two primitive values used to signal absent or uninitialized value: null and undefined.
+
+//TypeScript has two corresponding types by the same names. How these types behave depends on whether you have the strictNullChecks option on.
+
+// The in Operator
+// JavaScript has an operator for determining if an object or its prototype chain has a property with a name: the in operator.
+// TypeScript takes this into account as a way to narrow down potential types.
+
+type fish = { swim: () => string }
+interface shark {
+  eat?: (food: string) => string
+}
+
+function move(animal: fish | shark) {
+  if ("swim" in animal) {
+    return animal.swim();
+  } else if ("eat" in animal) {
+    if (animal.eat) {
+      return animal.eat("shark food");
+    }
+
+  }
+}
