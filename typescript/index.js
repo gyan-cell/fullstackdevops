@@ -134,3 +134,25 @@ function move(animal) {
         }
     }
 }
+//Instance of Narrowing : 
+//JavaScript has an operator for checking whether or not a value is an “instance” of another value.
+//More specifically, in JavaScript x instanceof Foo checks whether the prototype chain of x contains Foo.prototype. 
+function consoleValue(date) {
+    if (date instanceof Date) {
+        return date.toISOString();
+    }
+    else {
+        return date.toUpperCase();
+    }
+}
+function myFunction(data) {
+    return data.isAdded();
+}
+function myFunction2(data) {
+    return data();
+}
+//Building  The Generics :
+//A major part of software engineering is building components that not only have well-defined and consistent APIs, but are also reusable.
+function identity(arg) {
+    return arg;
+}
